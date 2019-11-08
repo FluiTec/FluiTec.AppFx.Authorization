@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluiTec.AppFx.Data.Dapper.Mssql" Version="*" />
+    <PackageReference Include="FluiTec.AppFx.Data.Dapper.Mssql" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>
