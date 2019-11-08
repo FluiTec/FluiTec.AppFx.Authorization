@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluiTec.AppFx.Identity.Dapper.Mysql" Version="1.0.27" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FluiTec.AppFx.UnitTesting.Helper\FluiTec.AppFx.UnitTesting.Helper.csproj" />
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Activity.Dapper.Mysql\FluiTec.AppFx.Authorization.Activity.Dapper.Mysql.csproj" />
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Activity.Test\FluiTec.AppFx.Authorization.Activity.Test.csproj" />
+  </ItemGroup>
+
+</Project>
