@@ -3,7 +3,7 @@
 namespace FluiTec.AppFx.Authorization.Data.Entities
 {
     /// <summary>   An action role entity. </summary>
-    [EntityName("AppFxAuthorization.ActionRole")]
+    [EntityName("AppFxActionAuthorization.ActionRole")]
     public class ActionRoleEntity : IEntity<int>
     {
         /// <summary>   Gets or sets the identifier of the action. </summary>

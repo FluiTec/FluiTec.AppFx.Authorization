@@ -3,7 +3,7 @@
 namespace FluiTec.AppFx.Authorization.Data.Entities
 {
     /// <summary>   An action entity. </summary>
-    [EntityName("AppFxAuthorization.Action")]
+    [EntityName("AppFxActionAuthorization.Action")]
     public class ActionEntity : IEntity<int>
     {
         /// <summary>   Gets or sets the identifier of the client. </summary>

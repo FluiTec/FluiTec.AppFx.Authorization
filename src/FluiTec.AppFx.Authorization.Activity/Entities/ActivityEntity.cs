@@ -3,7 +3,7 @@
 namespace FluiTec.AppFx.Authorization.Activity.Entities
 {
     /// <summary>An activity entity.</summary>
-    [EntityName("AppFxAuthorizationActivity.Activity")]
+    [EntityName("AppFxAuthorization.Activity")]
     public class ActivityEntity : IEntity<int>
     {
         /// <summary>Gets or sets the name.</summary>
