@@ -3,7 +3,7 @@
 namespace FluiTec.AppFx.Authorization.Data.Entities
 {
     /// <summary>   A role entity. </summary>
-    [EntityName("WtsAuthorization.Role")]
+    [EntityName("AppFxAuthorization.Role")]
     public class RoleEntity : IEntity<int>
     {
         /// <summary>   Gets or sets the name. </summary>
