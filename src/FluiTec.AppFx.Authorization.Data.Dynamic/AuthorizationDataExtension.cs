@@ -14,12 +14,21 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">         The services to act on. </param>
         /// <param name="configuration">    The configuration. </param>
+        /// <param name="migrate">          (Optional) True to migrate.</param>
         /// <returns>   An IServiceCollection. </returns>
         public static IServiceCollection ConfigureAuthorizationDataService(this IServiceCollection services,
-            IConfigurationRoot configuration)
+            IConfigurationRoot configuration, bool migrate = true)
         {
             var provider = new AuthorizationDataProvider(configuration.GetConfiguration<AuthorizationDataOptions>());
             services.AddSingleton(p => provider.GetDataService(configuration));
+
+            if (migrate)
+            {
+                var dataService = provider.GetDataService(configuration);
+                if (dataService.CanMigrate())
+                    dataService.Migrate();
+            }
+
             return services;
         }
     }
