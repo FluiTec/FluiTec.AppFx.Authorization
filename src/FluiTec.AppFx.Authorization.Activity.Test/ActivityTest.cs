@@ -73,7 +73,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Test
                         ResourceDisplayName = "MyDisplayName",
                         GroupName = "MyGroupName",
                         GroupDisplayName = "MyGroupDisplayName"
-                }
+                    }
                 );
 
                 activity.Name = "Changed";
@@ -94,7 +94,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Test
                         ResourceDisplayName = "MyDisplayName",
                         GroupName = "MyGroupName",
                         GroupDisplayName = "MyGroupDisplayName"
-                }
+                    }
                 );
 
                 uow.ActivityRepository.Delete(role.Id);

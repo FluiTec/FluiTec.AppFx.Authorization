@@ -1,5 +1,4 @@
-﻿using FluiTec.AppFx.Data.Dapper;
-using FluiTec.AppFx.Data.Dapper.Pgsql;
+﻿using FluiTec.AppFx.Data.Dapper.Pgsql;
 using FluiTec.AppFx.Identity;
 using FluiTec.AppFx.Identity.Dapper.Pgsql;
 using FluiTec.AppFx.UnitTesting.Helper;

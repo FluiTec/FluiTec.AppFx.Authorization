@@ -16,8 +16,10 @@ namespace FluiTec.AppFx.Authorization.Api.Api
         }
 
         /// <summary>   Deletes the given model. </summary>
-        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
-        ///                                             null. </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     Thrown when one or more required arguments are
+        ///     null.
+        /// </exception>
         /// <param name="model">    The model to delete. </param>
         /// <returns>   An asynchronous result. </returns>
         public override async Task Delete(AdminActivityModel model)

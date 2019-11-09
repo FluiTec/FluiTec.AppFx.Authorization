@@ -9,6 +9,14 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
     /// <summary>   A lite database authorization data service. </summary>
     public class LiteDbAuthorizationDataService : LiteDbDataService, IAuthorizationDataService
     {
+        #region Properties
+
+        /// <summary>   Gets the name. </summary>
+        /// <value> The name. </value>
+        public override string Name => "LiteDbAuthorizationDataService";
+
+        #endregion
+
         #region Constructors
 
         /// <summary>
@@ -40,14 +48,6 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
 
         #endregion
 
-        #region Properties
-
-        /// <summary>   Gets the name. </summary>
-        /// <value> The name. </value>
-        public override string Name => "LiteDbAuthorizationDataService";
-
-        #endregion
-
         #region Methods
 
         /// <summary>   Starts unit of work. </summary>
@@ -58,10 +58,14 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
         }
 
         /// <summary>   Starts unit of work. </summary>
-        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
-        ///                                             null. </exception>
-        /// <exception cref="ArgumentException">        Thrown when one or more arguments have
-        ///                                             unsupported or illegal values. </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     Thrown when one or more required arguments are
+        ///     null.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when one or more arguments have
+        ///     unsupported or illegal values.
+        /// </exception>
         /// <param name="other">    The other. </param>
         /// <returns>   An IAuthorizationUnitOfWork. </returns>
         public IAuthorizationUnitOfWork StartUnitOfWork(IUnitOfWork other)
@@ -69,7 +73,7 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
             if (other == null) throw new ArgumentNullException(nameof(other));
             if (!(other is LiteDbUnitOfWork))
                 throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(LiteDbUnitOfWork)}");
-            return new LiteDbAuthorizationUnitOfWork(this, (LiteDbUnitOfWork)other);
+            return new LiteDbAuthorizationUnitOfWork(this, (LiteDbUnitOfWork) other);
         }
 
         /// <summary>   Begins unit of work. </summary>
@@ -82,9 +86,11 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
         /// <summary>   Registers the repository providers. </summary>
         protected virtual void RegisterRepositoryProviders()
         {
-            RegisterRepositoryProvider(new Func<IUnitOfWork, IActionRepository>(work => new LiteDbActionRepository(work)));
+            RegisterRepositoryProvider(
+                new Func<IUnitOfWork, IActionRepository>(work => new LiteDbActionRepository(work)));
             RegisterRepositoryProvider(new Func<IUnitOfWork, IRoleRepository>(work => new LiteDbRoleRepository(work)));
-            RegisterRepositoryProvider(new Func<IUnitOfWork, IActionRoleRepository>(work => new LiteDbActionRoleRepository(work)));
+            RegisterRepositoryProvider(
+                new Func<IUnitOfWork, IActionRoleRepository>(work => new LiteDbActionRoleRepository(work)));
         }
 
         #endregion

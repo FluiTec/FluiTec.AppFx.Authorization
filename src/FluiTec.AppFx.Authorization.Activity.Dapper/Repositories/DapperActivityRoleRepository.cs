@@ -37,7 +37,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Dapper.Repositories
         public IEnumerable<ActivityRoleEntity> ByRole(int roleId)
         {
             var command = $"SELECT * FROM {TableName} WHERE {nameof(ActivityRoleEntity.RoleId)} = @RoleId";
-            return UnitOfWork.Connection.Query<ActivityRoleEntity>(command, new { RoleId = roleId },
+            return UnitOfWork.Connection.Query<ActivityRoleEntity>(command, new {RoleId = roleId},
                 UnitOfWork.Transaction);
         }
     }

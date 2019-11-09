@@ -1,6 +1,6 @@
-﻿using FluiTec.AppFx.Options;
-using FluiTec.AppFx.Authorization.Data.Dynamic;
+﻿using FluiTec.AppFx.Authorization.Data.Dynamic;
 using FluiTec.AppFx.Authorization.Data.Dynamic.Configuration;
+using FluiTec.AppFx.Options;
 using Microsoft.Extensions.Configuration;
 
 // ReSharper disable once CheckNamespace

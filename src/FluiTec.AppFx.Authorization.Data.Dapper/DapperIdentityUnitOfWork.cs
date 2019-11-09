@@ -17,7 +17,8 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper
         /// <summary>   Constructor. </summary>
         /// <param name="dataService">      The data service. </param>
         /// <param name="parentUnitOfWork"> The parent unit of work. </param>
-        public DapperIdentityUnitOfWork(DapperDataService dataService, DapperUnitOfWork parentUnitOfWork) : base(dataService, parentUnitOfWork)
+        public DapperIdentityUnitOfWork(DapperDataService dataService, DapperUnitOfWork parentUnitOfWork) : base(
+            dataService, parentUnitOfWork)
         {
         }
 

@@ -26,7 +26,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper.Repositories
         public IEnumerable<ActionEntity> GetByClient(string clientId)
         {
             var command = SqlBuilder.SelectByFilter(EntityType, nameof(ActionEntity.ClientId));
-            return UnitOfWork.Connection.Query<ActionEntity>(command, new { ClientId = clientId },
+            return UnitOfWork.Connection.Query<ActionEntity>(command, new {ClientId = clientId},
                 UnitOfWork.Transaction);
         }
 

@@ -1,5 +1,4 @@
-﻿using FluiTec.AppFx.Data.Dapper;
-using FluiTec.AppFx.Data.Dapper.Mssql;
+﻿using FluiTec.AppFx.Data.Dapper.Mssql;
 using FluiTec.AppFx.Identity;
 using FluiTec.AppFx.Identity.Dapper.Mssql;
 using FluiTec.AppFx.UnitTesting.Helper;

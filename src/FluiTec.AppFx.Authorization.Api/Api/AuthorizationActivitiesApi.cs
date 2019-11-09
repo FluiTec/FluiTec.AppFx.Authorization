@@ -17,13 +17,16 @@ namespace FluiTec.AppFx.Authorization.Api.Api
         /// <param name="service">  The service. </param>
         /// <param name="subPath">  Full pathname of the sub file. </param>
         /// <param name="cache">    The cache. </param>
-        public AuthorizationActivitiesApi(IWebService service, string subPath, IMemoryCache cache) : base(service, subPath, cache)
+        public AuthorizationActivitiesApi(IWebService service, string subPath, IMemoryCache cache) : base(service,
+            subPath, cache)
         {
         }
 
         // <summary>   Deletes the given ID. </summary>
-        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
-        ///                                             null. </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     Thrown when one or more required arguments are
+        ///     null.
+        /// </exception>
         /// <param name="model">    The model to add. </param>
         /// <returns>   An asynchronous result. </returns>
         public override async Task Delete(ActivityModel model)
@@ -42,7 +45,9 @@ namespace FluiTec.AppFx.Authorization.Api.Api
             var key = $"{ModelTypeName}.{activity}.{userEmail}";
             if (Cache.TryGetValue(key, out bool entry)) return entry;
 
-            var options = new MemoryCacheEntryOptions().SetAbsoluteExpiration(new DateTimeOffset(DateTime.Now.Add(CacheExpiration)));
+            var options =
+                new MemoryCacheEntryOptions().SetAbsoluteExpiration(
+                    new DateTimeOffset(DateTime.Now.Add(CacheExpiration)));
             entry = await IsAuthorizedWeb(activity, userEmail);
             Cache.Set(key, entry, options);
 
@@ -66,7 +71,7 @@ namespace FluiTec.AppFx.Authorization.Api.Api
                 return true;
             if (response.StatusCode == HttpStatusCode.NoContent)
                 return false;
-            
+
             throw new AuthorizationException(response);
         }
     }

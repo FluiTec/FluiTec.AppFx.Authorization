@@ -1,5 +1,4 @@
-﻿using FluiTec.AppFx.Data.Dapper;
-using FluiTec.AppFx.Data.Dapper.Mysql;
+﻿using FluiTec.AppFx.Data.Dapper.Mysql;
 using FluiTec.AppFx.Identity;
 using FluiTec.AppFx.Identity.Dapper.Mysql;
 using FluiTec.AppFx.UnitTesting.Helper;

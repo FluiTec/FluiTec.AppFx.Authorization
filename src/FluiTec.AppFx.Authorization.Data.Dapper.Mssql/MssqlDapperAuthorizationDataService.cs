@@ -24,43 +24,6 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper.Mssql
 
         #endregion
 
-        #region IAuthorizationDataService
-
-        /// <summary>   Starts unit of work. </summary>
-        /// <returns>   An IAuthorizationUnitOfWork. </returns>
-        public IAuthorizationUnitOfWork StartUnitOfWork()
-        {
-            return new DapperIdentityUnitOfWork(this);
-        }
-
-        /// <summary>   Starts unit of work. </summary>
-        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
-        ///                                             null. </exception>
-        /// <exception cref="ArgumentException">        Thrown when one or more arguments have
-        ///                                             unsupported or illegal values. </exception>
-        /// <param name="other">    The other. </param>
-        /// <returns>   An IAuthorizationUnitOfWork. </returns>
-        public IAuthorizationUnitOfWork StartUnitOfWork(IUnitOfWork other)
-        {
-            if (other == null) throw new ArgumentNullException(nameof(other));
-            if (!(other is DapperUnitOfWork))
-                throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(DapperUnitOfWork)}");
-            return new DapperIdentityUnitOfWork(this, (DapperUnitOfWork)other);
-        }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>	The name. </summary>
-        public override string Name => "MssqlDapperAuthorizationDataService";
-
-        /// <summary>   Gets information describing the meta. </summary>
-        /// <value> Information describing the meta. </value>
-        public override IVersionTableMetaData MetaData => new VersionTable();
-
-        #endregion
-
         #region Methods
 
         /// <summary>	Registers the identity repositories. </summary>
@@ -73,6 +36,47 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper.Mssql
             RegisterRepositoryProvider(
                 new Func<IUnitOfWork, IActionRoleRepository>(work => new DapperActionRoleRepository(work)));
         }
+
+        #endregion
+
+        #region IAuthorizationDataService
+
+        /// <summary>   Starts unit of work. </summary>
+        /// <returns>   An IAuthorizationUnitOfWork. </returns>
+        public IAuthorizationUnitOfWork StartUnitOfWork()
+        {
+            return new DapperIdentityUnitOfWork(this);
+        }
+
+        /// <summary>   Starts unit of work. </summary>
+        /// <exception cref="ArgumentNullException">
+        ///     Thrown when one or more required arguments are
+        ///     null.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     Thrown when one or more arguments have
+        ///     unsupported or illegal values.
+        /// </exception>
+        /// <param name="other">    The other. </param>
+        /// <returns>   An IAuthorizationUnitOfWork. </returns>
+        public IAuthorizationUnitOfWork StartUnitOfWork(IUnitOfWork other)
+        {
+            if (other == null) throw new ArgumentNullException(nameof(other));
+            if (!(other is DapperUnitOfWork))
+                throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(DapperUnitOfWork)}");
+            return new DapperIdentityUnitOfWork(this, (DapperUnitOfWork) other);
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>	The name. </summary>
+        public override string Name => "MssqlDapperAuthorizationDataService";
+
+        /// <summary>   Gets information describing the meta. </summary>
+        /// <value> Information describing the meta. </value>
+        public override IVersionTableMetaData MetaData => new VersionTable();
 
         #endregion
     }

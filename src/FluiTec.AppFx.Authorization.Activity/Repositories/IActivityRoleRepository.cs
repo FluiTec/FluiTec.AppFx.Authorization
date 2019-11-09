@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using FluiTec.AppFx.Authorization.Activity.Entities;
 using FluiTec.AppFx.Data;
-using FluiTec.AppFx.Identity.Entities;
 
 namespace FluiTec.AppFx.Authorization.Activity.Repositories
 {

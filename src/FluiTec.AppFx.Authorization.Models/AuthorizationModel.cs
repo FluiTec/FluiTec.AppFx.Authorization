@@ -1,4 +1,4 @@
-﻿ namespace FluiTec.AppFx.Authorization.Models
+﻿namespace FluiTec.AppFx.Authorization.Models
 {
     /// <summary>   A data Model for the authorization. </summary>
     public class AuthorizationModel

@@ -53,7 +53,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Dapper.Mssql
             if (other == null) throw new ArgumentNullException(nameof(other));
             if (!(other is DapperUnitOfWork))
                 throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(DapperUnitOfWork)}");
-            return new DapperAuthorizationUnitOfWork(this, (DapperUnitOfWork)other);
+            return new DapperAuthorizationUnitOfWork(this, (DapperUnitOfWork) other);
         }
 
         /// <summary>Registers the identity repositories.</summary>

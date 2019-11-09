@@ -21,7 +21,8 @@ namespace FluiTec.AppFx.Authorization.Activity.AuthorizationHandlers
         /// <param name="context">      The authorization context. </param>
         /// <param name="requirement">  The requirement to evaluate. </param>
         /// <returns>The asynchronous result.</returns>
-        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, AdministrativeAccessRequirement requirement)
+        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context,
+            AdministrativeAccessRequirement requirement)
         {
             // if user is in role administrator, succeed
             if (context.User.IsInRole("Administrator"))
@@ -29,7 +30,7 @@ namespace FluiTec.AppFx.Authorization.Activity.AuthorizationHandlers
                 context.Succeed(requirement);
                 return;
             }
-           
+
             // if any of the sub-requirements succeeds - succeed
             foreach (var r in requirement.Requirements)
             {

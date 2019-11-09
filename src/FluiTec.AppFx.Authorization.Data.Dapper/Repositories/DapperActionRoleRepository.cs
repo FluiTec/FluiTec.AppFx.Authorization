@@ -25,7 +25,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper.Repositories
         public IEnumerable<ActionRoleEntity> ByActionId(int actionId)
         {
             var command = SqlBuilder.SelectByFilter(EntityType, nameof(ActionRoleEntity.ActionId));
-            return UnitOfWork.Connection.Query<ActionRoleEntity>(command, new { ActionId = actionId },
+            return UnitOfWork.Connection.Query<ActionRoleEntity>(command, new {ActionId = actionId},
                 UnitOfWork.Transaction);
         }
 
@@ -38,7 +38,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dapper.Repositories
         public IEnumerable<ActionRoleEntity> ByRoleId(int roleId)
         {
             var command = SqlBuilder.SelectByFilter(EntityType, nameof(ActionRoleEntity.RoleId));
-            return UnitOfWork.Connection.Query<ActionRoleEntity>(command, new { RoleId = roleId },
+            return UnitOfWork.Connection.Query<ActionRoleEntity>(command, new {RoleId = roleId},
                 UnitOfWork.Transaction);
         }
     }

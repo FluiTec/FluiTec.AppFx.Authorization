@@ -55,8 +55,9 @@ namespace FluiTec.AppFx.Authorization.Activity.LiteDb
         public IAuthorizationUnitOfWork StartUnitOfWork(IUnitOfWork other)
         {
             if (other == null) throw new ArgumentNullException(nameof(other));
-            if (!(other is LiteDbUnitOfWork)) throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(LiteDbUnitOfWork)}.");
-            return new LiteDbAuthorizationUnitOfWork(this, (LiteDbUnitOfWork)other);
+            if (!(other is LiteDbUnitOfWork))
+                throw new ArgumentException($"Incompatible UnitOfWork. Must be of type {nameof(LiteDbUnitOfWork)}.");
+            return new LiteDbAuthorizationUnitOfWork(this, (LiteDbUnitOfWork) other);
         }
 
         /// <summary>Registers the identity repositories.</summary>

@@ -23,18 +23,21 @@ namespace FluiTec.AppFx.Authorization.Api
         /// <param name="context">      The authorization context. </param>
         /// <param name="requirement">  The requirement to evaluate. </param>
         /// <returns>   An asynchronous result. </returns>
-        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, AuhtorizedForActionRequirement requirement)
+        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context,
+            AuhtorizedForActionRequirement requirement)
         {
-            string email = context.User.Claims.SingleOrDefault(c => c.Type == "email")?.Value;
+            var email = context.User.Claims.SingleOrDefault(c => c.Type == "email")?.Value;
             if (!string.IsNullOrWhiteSpace(email))
             {
-                if(await _authorizationService.Activities.IsAuthorized(requirement.ActionName, email))
+                if (await _authorizationService.Activities.IsAuthorized(requirement.ActionName, email))
                     context.Succeed(requirement);
                 else
                     context.Fail();
             }
             else
+            {
                 context.Fail();
+            }
         }
     }
 }

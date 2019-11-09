@@ -17,7 +17,8 @@ namespace FluiTec.AppFx.Authorization.Data.LiteDb
         /// <summary>   Constructor. </summary>
         /// <param name="dataService">      The data service. </param>
         /// <param name="parentUnitOfWork"> The parent unit of work. </param>
-        public LiteDbAuthorizationUnitOfWork(LiteDbDataService dataService, LiteDbUnitOfWork parentUnitOfWork) : base(dataService, parentUnitOfWork)
+        public LiteDbAuthorizationUnitOfWork(LiteDbDataService dataService, LiteDbUnitOfWork parentUnitOfWork) : base(
+            dataService, parentUnitOfWork)
         {
         }
 

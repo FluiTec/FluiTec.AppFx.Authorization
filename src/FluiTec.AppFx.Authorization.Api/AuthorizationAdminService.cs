@@ -6,14 +6,6 @@ namespace FluiTec.AppFx.Authorization.Api
     /// <summary>   An authorization admin service. </summary>
     public class AuthorizationAdminService : BearerSecuredJsonService<AuthorizationServiceOptions>
     {
-        #region Fields
-
-        private AuthorizationAdminActivitiesApi _activities;
-
-        private AuthorizationAdminRolesApi _roles;
-
-        #endregion
-
         #region Constructors
 
         /// <summary>   Constructor. </summary>
@@ -31,8 +23,17 @@ namespace FluiTec.AppFx.Authorization.Api
         /// <returns>   True if it succeeds, false if it fails. </returns>
         protected override bool ValidateOptions(AuthorizationServiceOptions options)
         {
-            return !string.IsNullOrWhiteSpace(options.AdminActivitiesPath) && !string.IsNullOrWhiteSpace(options.RolesPath) && base.ValidateOptions(options);
+            return !string.IsNullOrWhiteSpace(options.AdminActivitiesPath) &&
+                   !string.IsNullOrWhiteSpace(options.RolesPath) && base.ValidateOptions(options);
         }
+
+        #endregion
+
+        #region Fields
+
+        private AuthorizationAdminActivitiesApi _activities;
+
+        private AuthorizationAdminRolesApi _roles;
 
         #endregion
 
@@ -40,7 +41,8 @@ namespace FluiTec.AppFx.Authorization.Api
 
         /// <summary>   Gets the activities. </summary>
         /// <value> The activities. </value>
-        public AuthorizationAdminActivitiesApi Activities => _activities ?? (_activities = new AuthorizationAdminActivitiesApi(this, Options.AdminActivitiesPath));
+        public AuthorizationAdminActivitiesApi Activities =>
+            _activities ?? (_activities = new AuthorizationAdminActivitiesApi(this, Options.AdminActivitiesPath));
 
         /// <summary>   Gets the roles. </summary>
         /// <value> The roles. </value>

@@ -7,16 +7,6 @@ namespace FluiTec.AppFx.Authorization.Api
     /// <summary>   An authorization service. </summary>
     public class AuthorizationService : BearerSecuredJsonService<AuthorizationServiceOptions>
     {
-        #region Fields
-
-        /// <summary>   The activities. </summary>
-        private AuthorizationActivitiesApi _activities;
-
-        /// <summary>   The cache. </summary>
-        private IMemoryCache _cache;
-
-        #endregion
-
         #region Constructors
 
         /// <summary>   Constructor. </summary>
@@ -26,6 +16,16 @@ namespace FluiTec.AppFx.Authorization.Api
         {
             _cache = cache;
         }
+
+        #endregion
+
+        #region Fields
+
+        /// <summary>   The activities. </summary>
+        private AuthorizationActivitiesApi _activities;
+
+        /// <summary>   The cache. </summary>
+        private readonly IMemoryCache _cache;
 
         #endregion
 
@@ -41,7 +41,8 @@ namespace FluiTec.AppFx.Authorization.Api
 
         /// <summary>   Gets the activities. </summary>
         /// <value> The activities. </value>
-        public AuthorizationActivitiesApi Activities => _activities ?? (_activities = new AuthorizationActivitiesApi(this, Options.ActivitiesPath, _cache));
+        public AuthorizationActivitiesApi Activities =>
+            _activities ?? (_activities = new AuthorizationActivitiesApi(this, Options.ActivitiesPath, _cache));
 
         #endregion
     }
