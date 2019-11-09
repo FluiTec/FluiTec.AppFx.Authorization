@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://www.nuget.org/packages/FluiTec.AppFx.Authorization/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FluiTec/FluiTec.AppFx.Authorization</RepositoryUrl>
+    <NeutralLanguage>de</NeutralLanguage>
+    <PostBuildEvent></PostBuildEvent>
+    <PreBuildEvent></PreBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluiTec.AppFx.Options" Version="1.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Data.Dapper.Mssql\FluiTec.AppFx.Authorization.Data.Dapper.Mssql.csproj" />
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Data.Dapper.Mysql\FluiTec.AppFx.Authorization.Data.Dapper.Mysql.csproj" />
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Data.Dapper.Pgsql\FluiTec.AppFx.Authorization.Data.Dapper.Pgsql.csproj" />
+    <ProjectReference Include="..\FluiTec.AppFx.Authorization.Data.LiteDb\FluiTec.AppFx.Authorization.Data.LiteDb.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
