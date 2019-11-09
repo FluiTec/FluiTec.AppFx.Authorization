@@ -16,7 +16,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Dapper.Migration
         public string SchemaName => Globals.Schema;
 
         /// <summary>	Name of the table. </summary>
-        public string TableName => "AppFxAuthorization_Version";
+        public string TableName => "AppFxAuthorizationActivity_Version";
 
         /// <summary>	Name of the unique index. </summary>
         public string UniqueIndexName => "UC_Version";
