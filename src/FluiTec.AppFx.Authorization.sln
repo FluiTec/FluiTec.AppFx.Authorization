@@ -46,9 +46,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\.gitignore = ..\.gitignore
 		..\LICENSE.md = ..\LICENSE.md
 		..\README.md = ..\README.md
+		..\THIRD_PARTY_LICENCES.md = ..\THIRD_PARTY_LICENCES.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data", "FluiTec.AppFx.Authorization.Data\FluiTec.AppFx.Authorization.Data.csproj", "{9E48D327-5F6C-4F18-A827-B1CAA094AB07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data", "FluiTec.AppFx.Authorization.Data\FluiTec.AppFx.Authorization.Data.csproj", "{9E48D327-5F6C-4F18-A827-B1CAA094AB07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2326C4EA-2329-4747-B2C8-8D6BD072D307}"
 EndProject
@@ -58,21 +59,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{4A5822
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDb", "LiteDb", "{7FF0412A-34F0-499D-B5AF-CECE1D6F057B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.Dapper", "FluiTec.AppFx.Authorization.Data.Dapper\FluiTec.AppFx.Authorization.Data.Dapper.csproj", "{254BF553-FFAA-46BE-AA91-29B20D0994EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.Dapper", "FluiTec.AppFx.Authorization.Data.Dapper\FluiTec.AppFx.Authorization.Data.Dapper.csproj", "{254BF553-FFAA-46BE-AA91-29B20D0994EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.Dynamic", "FluiTec.AppFx.Authorization.Data.Dynamic\FluiTec.AppFx.Authorization.Data.Dynamic.csproj", "{A91C46F4-8BC5-450B-B9B3-6301F8FF79BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.Dynamic", "FluiTec.AppFx.Authorization.Data.Dynamic\FluiTec.AppFx.Authorization.Data.Dynamic.csproj", "{A91C46F4-8BC5-450B-B9B3-6301F8FF79BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.Dapper.Mssql", "FluiTec.AppFx.Authorization.Data.Dapper.Mssql\FluiTec.AppFx.Authorization.Data.Dapper.Mssql.csproj", "{F3217679-7627-4C49-9F71-9FA5BC5928D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.Dapper.Mssql", "FluiTec.AppFx.Authorization.Data.Dapper.Mssql\FluiTec.AppFx.Authorization.Data.Dapper.Mssql.csproj", "{F3217679-7627-4C49-9F71-9FA5BC5928D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.Dapper.Mysql", "FluiTec.AppFx.Authorization.Data.Dapper.Mysql\FluiTec.AppFx.Authorization.Data.Dapper.Mysql.csproj", "{8921B86B-4AFC-4E67-A715-9787FEBC9D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.Dapper.Mysql", "FluiTec.AppFx.Authorization.Data.Dapper.Mysql\FluiTec.AppFx.Authorization.Data.Dapper.Mysql.csproj", "{8921B86B-4AFC-4E67-A715-9787FEBC9D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.Dapper.Pgsql", "FluiTec.AppFx.Authorization.Data.Dapper.Pgsql\FluiTec.AppFx.Authorization.Data.Dapper.Pgsql.csproj", "{02B5E312-78CD-4CCD-9BF3-CCA4E4215E54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.Dapper.Pgsql", "FluiTec.AppFx.Authorization.Data.Dapper.Pgsql\FluiTec.AppFx.Authorization.Data.Dapper.Pgsql.csproj", "{02B5E312-78CD-4CCD-9BF3-CCA4E4215E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Data.LiteDb", "FluiTec.AppFx.Authorization.Data.LiteDb\FluiTec.AppFx.Authorization.Data.LiteDb.csproj", "{A82F28F1-8FA9-4B57-BBA4-2F535F618617}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Data.LiteDb", "FluiTec.AppFx.Authorization.Data.LiteDb\FluiTec.AppFx.Authorization.Data.LiteDb.csproj", "{A82F28F1-8FA9-4B57-BBA4-2F535F618617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Api", "FluiTec.AppFx.Authorization.Api\FluiTec.AppFx.Authorization.Api.csproj", "{C2C3A866-DB4C-4A54-BAC5-8F78929B8CEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Api", "FluiTec.AppFx.Authorization.Api\FluiTec.AppFx.Authorization.Api.csproj", "{C2C3A866-DB4C-4A54-BAC5-8F78929B8CEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.AppFx.Authorization.Models", "FluiTec.AppFx.Authorization.Models\FluiTec.AppFx.Authorization.Models.csproj", "{F99FF7C4-88D6-4425-A52E-5EA07BAACA5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluiTec.AppFx.Authorization.Models", "FluiTec.AppFx.Authorization.Models\FluiTec.AppFx.Authorization.Models.csproj", "{F99FF7C4-88D6-4425-A52E-5EA07BAACA5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

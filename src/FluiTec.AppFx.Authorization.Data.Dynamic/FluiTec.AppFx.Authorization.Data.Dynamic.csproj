@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluiTec.AppFx.Options" Version="1.0.9" />
+    <PackageReference Include="FluiTec.AppFx.Options" Version="1.0.10" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
   </ItemGroup>
 
