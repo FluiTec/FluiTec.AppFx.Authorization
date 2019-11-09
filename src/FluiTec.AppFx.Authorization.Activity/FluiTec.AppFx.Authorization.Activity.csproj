@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluiTec.AppFx.Data" Version="1.0.8" />
-    <PackageReference Include="FluiTec.AppFx.Identity" Version="1.0.2" />
+    <PackageReference Include="FluiTec.AppFx.Identity" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.2" />
