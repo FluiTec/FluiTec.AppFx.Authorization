@@ -22,7 +22,7 @@
   <ItemGroup>
     <PackageReference Include="FluiTec.AppFx.Options" Version="1.0.10" />
     <PackageReference Include="FluiTec.AppFx.Rest" Version="1.0.5" />
-    <PackageReference Include="IdentityModel" Version="4.1.0" />
+    <PackageReference Include="IdentityModel" Version="3.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
