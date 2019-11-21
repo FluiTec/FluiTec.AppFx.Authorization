@@ -26,7 +26,7 @@ namespace FluiTec.AppFx.Authorization.Api
             if (options.SynchronizeActivities)
                 SynchronizeAuthorizationActivities(provider.GetRequiredService<AuthorizationService>(), options);
             services.AddScoped<IAuthorizationHandler, AuhtorizedForActionHandler>();
-            services.AddAuthorization(aOptions =>
+            services.AddAuthorizationCore(aOptions =>
             {
                 foreach (var o in options.Activities)
                     aOptions.AddPolicy(o,
