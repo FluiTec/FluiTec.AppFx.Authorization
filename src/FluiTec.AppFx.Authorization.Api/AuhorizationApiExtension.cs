@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using FluiTec.AppFx.Authorization.Models;
 using FluiTec.AppFx.Options;
 using Microsoft.AspNetCore.Authorization;
@@ -18,7 +19,7 @@ namespace FluiTec.AppFx.Authorization.Api
         public static IServiceCollection ConfigureAuthorizationApi(this IServiceCollection services,
             IConfigurationRoot configuration, string configurationName = "AuthorizationServiceOptions")
         {
-            var options = configuration.GetConfiguration<AuthorizationServiceOptions>(configurationName);
+            var options = configuration.Configure<AuthorizationServiceOptions>(configurationName, services);
             services.AddSingleton(options);
             services.AddMemoryCache();
             services.AddScoped<AuthorizationService>();

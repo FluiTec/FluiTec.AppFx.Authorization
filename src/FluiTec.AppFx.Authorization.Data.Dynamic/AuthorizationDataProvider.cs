@@ -11,6 +11,7 @@ using FluiTec.AppFx.Data.Dapper.Pgsql;
 using FluiTec.AppFx.Data.LiteDb;
 using FluiTec.AppFx.Options;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FluiTec.AppFx.Authorization.Data.Dynamic
 {
@@ -54,7 +55,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dynamic
             internal static IAuthorizationDataService ProvideService(IConfigurationRoot configuration)
             {
                 if (_options == null)
-                    _options = configuration.GetConfiguration<MssqlDapperServiceOptions>();
+                    _options = configuration.Configure<MssqlDapperServiceOptions>(new ServiceCollection());
                 return new MssqlDapperAuthorizationDataService(_options);
             }
         }
@@ -66,7 +67,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dynamic
             internal static IAuthorizationDataService ProvideService(IConfigurationRoot configuration)
             {
                 if (_options == null)
-                    _options = configuration.GetConfiguration<PgsqlDapperServiceOptions>();
+                    _options = configuration.Configure<PgsqlDapperServiceOptions>(new ServiceCollection());
                 return new PgsqlDapperAuthorizationDataService(_options);
             }
         }
@@ -78,7 +79,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dynamic
             internal static IAuthorizationDataService ProvideService(IConfigurationRoot configuration)
             {
                 if (_options == null)
-                    _options = configuration.GetConfiguration<MysqlDapperServiceOptions>();
+                    _options = configuration.Configure<MysqlDapperServiceOptions>(new ServiceCollection());
                 return new MysqlDapperAuthorizationDataService(_options);
             }
         }
@@ -90,7 +91,7 @@ namespace FluiTec.AppFx.Authorization.Data.Dynamic
             internal static IAuthorizationDataService ProvideService(IConfigurationRoot configuration)
             {
                 if (_options == null)
-                    _options = configuration.GetConfiguration<LiteDbServiceOptions>();
+                    _options = configuration.Configure<LiteDbServiceOptions>(new ServiceCollection());
                 return new LiteDbAuthorizationDataService(_options);
             }
         }

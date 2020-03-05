@@ -20,7 +20,7 @@ namespace FluiTec.AppFx.Authorization.Activity.Dynamic
             IConfigurationRoot configuration, bool migrate = true)
         {
             var provider =
-                new ActivityAuthorizationDataProvider(configuration.GetConfiguration<ActivityAuthorizationOptions>());
+                new ActivityAuthorizationDataProvider(configuration.Configure<ActivityAuthorizationOptions>(services));
             services.AddScoped(p => provider.GetDataService(configuration));
 
             if (migrate)

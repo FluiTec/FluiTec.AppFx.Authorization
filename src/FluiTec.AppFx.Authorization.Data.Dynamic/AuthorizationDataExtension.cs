@@ -19,7 +19,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection ConfigureAuthorizationDataService(this IServiceCollection services,
             IConfigurationRoot configuration, bool migrate = true)
         {
-            var provider = new AuthorizationDataProvider(configuration.GetConfiguration<AuthorizationDataOptions>());
+            var provider = new AuthorizationDataProvider(configuration.Configure<AuthorizationDataOptions>(services));
             services.AddSingleton(p => provider.GetDataService(configuration));
 
             if (migrate)
